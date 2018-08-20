@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.invesmart</groupId>
+    <artifactId>invesmart-front</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>invesmart-ui</module>
+        <module>invesmart-request-handler</module>
+    </modules>
+
+    <properties>
+        <invesmart.request.handler.version>1.0.0</invesmart.request.handler.version>
+        <invesmart.ui.version>1.0.0</invesmart.ui.version>
+        <invesmart.commons.version>1.0.0</invesmart.commons.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <mockito.version>1.10.19</mockito.version>
+        <jUnit.version>4.12</jUnit.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <dozer.version>5.5.1</dozer.version>
+        <jackson.annotations.version>2.9.5</jackson.annotations.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.invesmart</groupId>
+                <artifactId>invesmart-request-handler</artifactId>
+                <version>${invesmart.request.handler.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.invesmart</groupId>
+                <artifactId>invesmart-ui</artifactId>
+                <version>${invesmart.ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.invesmart</groupId>
+                <artifactId>invesmart-commons</artifactId>
+                <version>${invesmart.commons.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    
+</project>
